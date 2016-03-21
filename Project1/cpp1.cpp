@@ -1,4 +1,4 @@
-//关于类的练习项目，难以自己完成，找的答案一行行分析
+//I cannot complete it by myself, this is the answer of others and my note.
 
 #include"cpp1.h"
 #include<cstdlib>
@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 	Sales_data item1;
 	print(std::cout, item1) << std::endl;
-	//输入一个空的item1，返回零值
+	//Input empty item1 and output zero
 	
 	Sales_data item2("0-201-78345-X");
 	print(std::cout, item2) << std::endl;
@@ -18,10 +18,9 @@ int main() {
 
 	Sales_data item4(std::cin);
 	print(std::cout, item4) << std::endl;
-	//用户输入isbn，册数和单价，返回isbn，册数和价格总和（用ctrl+z可以结束输入状态）
-
+	//Input ISBN,number of books and the unit price and output the ISBN,number of books and the amount price of book
 	system("pause");
-	//防止黑框一闪而过（上面要有catdlib头文件）
+	//Avoid the black block flashing
 	return 0;
 	
 }

@@ -1,8 +1,10 @@
 #pragma once
 //保证头文件只被编译一次
-#ifndef CP5_ex7_11_h
-#define CP5_ex7_11_h
-//防止次头文件被多次引入 用#ifndef和#endef（在下面),CP5_ex7_11_h是固定格式，一般为头文件的大写的名字
+//Ensure the include compiled once
+#ifndef CPP1_h
+#define CPP1_h
+//防止头文件被多次引入 用#ifndef和#endef（在下面),CP5_ex7_11_h是固定格式，一般为头文件的大写的名字
+//Ensure the safe.It's the format(using #ifndef and #endef).
 #include<string>
 #include<iostream>
 
@@ -10,7 +12,7 @@ struct Sales_data {
 	Sales_data() = default;
 	//声明了构造函数系统就不再自动生成默认构造函数了，加上这个语句可以提供系统生成的默认构造函数
 	Sales_data(const std::string& s): bookNo(s){}
-	Sales_data(const std::string& s, unsigned n, double p) :bookNo(s), units_sold(n),
+	Sales_data(const std::string& s, unsigned n, double p) :bookNo(s), units_sold(n),4
 		revenue(n*p) {}
 	//构造函数
 	Sales_data(std::istream& is);
@@ -21,10 +23,10 @@ struct Sales_data {
 	//声明combine函数
 
 	std::string bookNo;
-	unsigned units_sold = 0;
+	unsigned units_sold = 0;;
+
 	double revenue = 0.0;
 };
-
 std::istream& read(std::istream& is, Sales_data& item) {
 	double price = 0;
 	is >> item.bookNo >> item.units_sold >> price;
