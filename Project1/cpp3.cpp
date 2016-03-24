@@ -10,10 +10,10 @@ int main() {
 		cerr << "We can't open this file." << endl;
 		return -1;
 	}
-	string line;
+	string letter;
 	vector<string> words;
-	while (getline(in, line)) {
-		words.push_back(line);
+	while (cin(in, words)) {
+		words.push_back(letter);
 	}
 	in.close();
 
